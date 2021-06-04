@@ -1,0 +1,121 @@
+/* CSS color variables */
+:root {
+  --color-dark-text: #333333;
+  --color-light-text: #ffffff;
+  --color-background: #e6e6e6;
+  --color-bodyBG: #fff;
+  --color-section-1: #c0c04aa6;
+  --color-section-2: #f5deb3;
+  --color-overlay: #0000009f;
+}
+
+/* basic styling for the project is written already */
+
+/* Removing the default spacing from the element */
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-dark-text);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: absolute;
+  color: var(--color-light-text);
+  text-align: center;
+}
+
+.hero-content > h2 {
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+
+.hero-content > p {
+  font-size: 24px;
+  color: var(--color-light-text);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-section-1);
+}
+
+.container > h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container > p {
+  max-width: 50%;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.work {
+  background-color: var(--color-section-2);
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-overlay);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  background-color: var(--color-bodyBG);
+  width: 40%;
+  padding: 50px;
+  border-radius: 10px;
+  margin-top: 1000px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal > h2 {
+  margin-bottom: 20px;
+}
